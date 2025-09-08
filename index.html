@@ -272,6 +272,51 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
+
+        @media (max-width: 640px) {
+  .book-card {
+    font-size: 0.85rem; /* уменьшенный общий размер текста */
+  }
+
+  .book-card .h-48 {
+    height: 9rem; /* меньше картинка (примерно 144px вместо 192px) */
+  }
+
+  .book-card h3 {
+    font-size: 1rem; /* заголовок книги */
+  }
+
+  .book-card p {
+    font-size: 0.75rem; /* текст помельче */
+  }
+
+  .book-card .p-4 {
+    padding: 0.75rem; /* меньше отступ внутри карточки */
+  }
+
+  .book-card img {
+    object-fit: contain; /* чтобы картинка не резалась */
+  }
+}
+
+@media (max-width: 640px) {
+  /* Контейнер фильтров */
+  #catalog .bg-white.p-4.rounded-lg.shadow-sm {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;  /* центрируем содержимое */
+    gap: 0.75rem;
+  }
+
+  /* Селекты */
+  #genreFilter,
+  #priceFilter,
+  #sortFilter {
+    width: 100%;          /* ограниченная ширина */
+    max-width: 320px;    /* не больше, чтобы аккуратно смотрелось */
+    min-height: 44px;
+  }
+}
     </style>
 </head>
 <body class="bg-gray-50">
